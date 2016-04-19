@@ -18,14 +18,14 @@ defmodule ReferenceGraphql.Router do
 
     get "/", PageController, :index
     if Mix.env == :dev do
-      get "/graphiql", Absinthe.Plug.GraphiQL, schema: ReferenceGraphql.Web.Schema
+      get "/graphiql", Absinthe.Plug.GraphiQL, schema: ReferenceGraphql.Schema
     end
 
     resources "/references", ReferenceController
   end
 
   forward "/graphql", Absinthe.Plug,
-    schema: ReferenceGraphql.Web.Schema
+    schema: ReferenceGraphql.Schema
 
   # Other scopes may use custom stacks.
   # scope "/api", ReferenceGraphql do

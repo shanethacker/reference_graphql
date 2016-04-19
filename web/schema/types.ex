@@ -2,7 +2,8 @@ defmodule ReferenceGraphql.Schema.Types do
   use Absinthe.Schema.Notation
 
   object :reference do
-    field :heroid, :id
+    field :id, :id
+    field :heroid, :integer
     field :title, :string
     field :authors, :string
     field :year, :integer

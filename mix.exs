@@ -19,7 +19,7 @@ defmodule ReferenceGraphql.Mixfile do
   def application do
     [mod: {ReferenceGraphql, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :absinthe]]
+                    :phoenix_ecto, :postgrex, :absinthe, :absinthe_plug]]
   end
 
   # Specifies which paths to compile per environment.
