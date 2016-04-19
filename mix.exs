@@ -37,7 +37,8 @@ defmodule ReferenceGraphql.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
-     {:absinthe, "~> 1.1.0"}]
+     {:absinthe, "~> 1.1.0"},
+     {:absinthe_plug, "~> 1.1"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

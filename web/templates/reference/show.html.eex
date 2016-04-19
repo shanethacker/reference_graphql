@@ -1,0 +1,48 @@
+<h2>Show reference</h2>
+
+<ul>
+
+  <li>
+    <strong>Heroid:</strong>
+    <%= @reference.heroid %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @reference.title %>
+  </li>
+
+  <li>
+    <strong>Authors:</strong>
+    <%= @reference.authors %>
+  </li>
+
+  <li>
+    <strong>Year:</strong>
+    <%= @reference.year %>
+  </li>
+
+  <li>
+    <strong>Journal:</strong>
+    <%= @reference.journal %>
+  </li>
+
+  <li>
+    <strong>Pagenumbers:</strong>
+    <%= @reference.pagenumbers %>
+  </li>
+
+  <li>
+    <strong>Volume:</strong>
+    <%= @reference.volume %>
+  </li>
+
+  <li>
+    <strong>Abstract:</strong>
+    <%= @reference.abstract %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: reference_path(@conn, :edit, @reference) %>
+<%= link "Back", to: reference_path(@conn, :index) %>

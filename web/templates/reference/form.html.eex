@@ -1,0 +1,59 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :heroid, class: "control-label" %>
+    <%= number_input f, :heroid, class: "form-control" %>
+    <%= error_tag f, :heroid %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :title, class: "control-label" %>
+    <%= text_input f, :title, class: "form-control" %>
+    <%= error_tag f, :title %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :authors, class: "control-label" %>
+    <%= text_input f, :authors, class: "form-control" %>
+    <%= error_tag f, :authors %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :year, class: "control-label" %>
+    <%= number_input f, :year, class: "form-control" %>
+    <%= error_tag f, :year %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :journal, class: "control-label" %>
+    <%= text_input f, :journal, class: "form-control" %>
+    <%= error_tag f, :journal %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :pagenumbers, class: "control-label" %>
+    <%= text_input f, :pagenumbers, class: "form-control" %>
+    <%= error_tag f, :pagenumbers %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :volume, class: "control-label" %>
+    <%= number_input f, :volume, class: "form-control" %>
+    <%= error_tag f, :volume %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :abstract, class: "control-label" %>
+    <%= text_input f, :abstract, class: "form-control" %>
+    <%= error_tag f, :abstract %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

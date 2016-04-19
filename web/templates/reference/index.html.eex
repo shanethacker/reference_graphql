@@ -1,0 +1,40 @@
+<h2>Listing references</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Heroid</th>
+      <th>Title</th>
+      <th>Authors</th>
+      <th>Year</th>
+      <th>Journal</th>
+      <th>Pagenumbers</th>
+      <th>Volume</th>
+      <th>Abstract</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for reference <- @references do %>
+    <tr>
+      <td><%= reference.heroid %></td>
+      <td><%= reference.title %></td>
+      <td><%= reference.authors %></td>
+      <td><%= reference.year %></td>
+      <td><%= reference.journal %></td>
+      <td><%= reference.pagenumbers %></td>
+      <td><%= reference.volume %></td>
+      <td><%= reference.abstract %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: reference_path(@conn, :show, reference), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: reference_path(@conn, :edit, reference), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: reference_path(@conn, :delete, reference), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New reference", to: reference_path(@conn, :new) %>
