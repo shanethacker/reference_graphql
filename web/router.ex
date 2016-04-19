@@ -17,15 +17,15 @@ defmodule ReferenceGraphql.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    if Mix.env == :dev do
-      get "/graphiql", Absinthe.Plug.GraphiQL, schema: ReferenceGraphql.Schema
-    end
-
     resources "/references", ReferenceController
   end
 
   forward "/graphql", Absinthe.Plug,
     schema: ReferenceGraphql.Schema
+
+  if Mix.env == :dev do
+    get "/graphiql", Absinthe.Plug.GraphiQL, schema: ReferenceGraphql.Schema
+  end
 
   # Other scopes may use custom stacks.
   # scope "/api", ReferenceGraphql do
