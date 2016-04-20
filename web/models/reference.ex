@@ -8,14 +8,14 @@ defmodule ReferenceGraphql.Reference do
     field :year, :integer
     field :journal, :string
     field :pagenumbers, :string
-    field :volume, :integer
+    field :volume, :string
     field :abstract, :string
 
     timestamps
   end
 
-  @required_fields ~w(heroid title authors year journal pagenumbers volume abstract)
-  @optional_fields ~w()
+  @required_fields ~w(heroid title authors journal)
+  @optional_fields ~w(year pagenumbers volume abstract)
 
   @doc """
   Creates a changeset based on the `model` and `params`.

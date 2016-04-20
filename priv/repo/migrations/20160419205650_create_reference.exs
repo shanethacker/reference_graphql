@@ -9,7 +9,7 @@ defmodule ReferenceGraphql.Repo.Migrations.CreateReference do
       add :year, :integer
       add :journal, :string
       add :pagenumbers, :string
-      add :volume, :integer
+      add :volume, :string
       add :abstract, :string
 
       timestamps
