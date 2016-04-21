@@ -3,13 +3,13 @@ defmodule ReferenceGraphql.Reference do
 
   schema "references" do
     field :heroid, :integer
-    field :title, :string
+    field :title, :string, size: 500
     field :authors, :string
     field :year, :integer
     field :journal, :string
     field :pagenumbers, :string
     field :volume, :string
-    field :abstract, :string
+    field :abstract, :string, size: 4000
 
     timestamps
   end
